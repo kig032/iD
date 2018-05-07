@@ -353,7 +353,7 @@
             "created": "만듦",
             "about_changeset_comments": "바뀜집합 덧글에 대해",
             "about_changeset_comments_link": "//wiki.openstreetmap.org/wiki/Good_changeset_comments",
-            "google_warning": "덧글에서 구글을 언급했습니다: 구글 지도로부터 복사하는 것은 엄격히 금지됨을 유의하세요.",
+            "google_warning": "댓글에서 구글을 언급했습니다: 구글 지도로부터 복사하는 것은 엄격히 금지됨을 유의하세요.",
             "google_warning_link": "https://www.openstreetmap.org/copyright"
         },
         "contributors": {
@@ -648,7 +648,7 @@
             "disconnected_highway": "도로가 연결되어 있지 않음",
             "disconnected_highway_tooltip": "도로는 다른 도로나 건물 입구와 연결되어야 합니다.",
             "old_multipolygon": "바깥 쪽의 다중 다각형 태그",
-            "old_multipolygon_tooltip": "이 스타일의 다중면은 더이상 사용되지 않습니다. 바깥쪽 대신에 부모 다중면을 배치해 주세요 ",
+            "old_multipolygon_tooltip": "이 스타일의 다중 다각형은 더이상 사용되지 않습니다. 바깥쪽 대신에 부모 다중 다각형을 배치해 주세요 ",
             "untagged_point": "태그되지 않은 점",
             "untagged_point_tooltip": "이 점이 무엇인지 설명하는 지물 유형을 선택하세요.",
             "untagged_line": "태그되지 않은 선",
@@ -712,7 +712,7 @@
                 "navigation_zoom": "마우스 휠이나 트랙 패드로 스크롤하거나 지도 측면의 {plus} / {minus} 버튼을 클릭하여 확대하거나 축소 할 수 있습니다. 키보드의 `+`,`-` 키를 사용할 수도 있습니다.",
                 "features_h": "지도 기능",
                 "features": "우리는 *지물*이라는 단어를 사용하여 도로, 건물, 또는 지도에 나타나는 것을 설명합니다. 현실 세계의 모든 것을 OpenStreetMap을 이용하여 매핑할 수 있습니다. 지도 기능은 *점*, *선*, 또는 *공간*을 사용하여 지도에 표기합니다.",
-                "nodes_ways": "OpenStreetmap에서, 점은 때떄로 *노드*라고 불리며, 선과 공간은 때때로 *길*이라고 불립니다."
+                "nodes_ways": "OpenStreetmap에서, 점은 때때로 *노드*라고 불리며, 선과 공간은 때때로 *길*이라고 불립니다."
             },
             "editing": {
                 "title": "편집 & 저장하기",
@@ -2200,15 +2200,15 @@
                 },
                 "smoothness": {
                     "label": "평활도",
-                    "options": {
-                        "bad": "견고한 바퀴: 트래킹 자전거, 자동차, 인력거",
+                    "options": 
                         "excellent": "얇은 롤러: 롤러브레이드, 스케이트보드",
                         "good": "얇은 바퀴: 경주용 자전거",
-                        "horrible": "오프로드: 중형 오프로드 차종",
-                        "impassable": "지나갈 수 없거나 / 안되는 바퀴가 있는 차종",
-                        "intermediate": "바퀴: 도시 자전거, 휠체어, 스쿠터",
-                        "very_bad": "하이 클리언스: 경형 오프로드 차종",
-                        "very_horrible": "특수 오프로드:  트랙터,  모든 지형적 차량"
+                        "horrible": "오프로드: 중형 오프로드 차량",
+                        "intermediate": "평범한 바퀴를 가진 차량: 도시용 자전거, 휠체어, 스쿠터",
+                        "bad": "바퀴가 튼튼한 차량: 트래킹 자전거, 자동차, 인력거",
+                        "very_bad": "바닥이 높은 차량: 경형 오프로드 차종",
+                        "very_horrible": "특수 오프로드 차량:  트랙터,  전지형(全地形) 만능차",
+                        "impassable": "지나갈 수 없거나 / 안되는 바퀴가 있는 차종"
                     },
                     "placeholder": "얇은 롤러, 바퀴, 오프로드..."
                 },
@@ -2352,9 +2352,9 @@
                     "label": "트랙 유형",
                     "options": {
                         "grade1": "단단함: 포장되었거나 심하게 압축된 하드코어 표면",
-                        "grade2": "거의 단단함: 약간의 부드러운 소재가 섞인 자갈/바위",
+                        "grade2": " 단단함: 약간의 부드러운 소재가 섞인 자갈/바위",
                         "grade3": "부드러운 소재와 딱딱한 소재가 섞임",
-                        "grade4": "거의 부드러움: 약간의 딱딱한 소재가 섞인 흙/모래/잔디",
+                        "grade4": "약간 부드러움: 약간의 딱딱한 소재가 섞인 흙/모래/잔디",
                         "grade5": "부드러움: 흙/모래/잔디"
                     },
                     "placeholder": "단단함, 거의 단단함, 부드러움..."
@@ -2875,19 +2875,19 @@
                 },
                 "amenity/place_of_worship/shinto": {
                     "name": "신사",
-                    "terms": "신사"
+                    "terms": "신사,토리이"
                 },
                 "amenity/place_of_worship/sikh": {
                     "name": "시크교 사원",
                     "terms": "구루드와라"
                 },
                 "amenity/place_of_worship/taoist": {
-                    "name": "도관",
-                    "terms": "도교 사원,궁관"
+                    "name": "도교 사원",
+                    "terms": "도교 사원"
                 },
                 "amenity/planetarium": {
-                    "name": "천체투영관",
-                    "terms": "플라네타륨, 천체 관측기"
+                    "name": "플라네타리움",
+                    "terms": "플라네타리움, 천체 관측기"
                 },
                 "amenity/police": {
                     "name": "경찰서",
@@ -3426,8 +3426,8 @@
                     "terms": "보트 제조소"
                 },
                 "craft/bookbinder": {
-                    "name": "책바인더",
-                    "terms": "바인더"
+                    "name": "제본공",
+                    "terms": "제본공"
                 },
                 "craft/brewery": {
                     "name": "주조공",
@@ -5812,7 +5812,7 @@
                     "terms": "댐"
                 },
                 "waterway/ditch": {
-                    "name": "구거",
+                    "name": "도랑",
                     "terms": "도랑"
                 },
                 "waterway/dock": {
